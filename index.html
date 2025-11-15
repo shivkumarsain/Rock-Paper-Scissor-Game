@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Rock Paper Scissor Game</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pY1K6ZV2m3JrZ+8vWzv7oMZJm4tQ9G8V5wz2n6d7X5a/2e1xq7y9R2QbJq1E0/3XYa6Y6Xwq3Q9q9f6Y1fGx0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container" role="application" aria-label="Rock Paper Scissor Game">
+    <div class="scores" aria-hidden="false">
+      <p>Computer : <span id="computer_score">0</span></p>
+      <p>You : <span id="user_score">0</span></p>
+    </div>
+
+    <div class="weapons" role="group" aria-label="Choose your weapon">
+      <button data-choice="rock" aria-label="Rock">
+        <i class="fa-solid fa-hand-back-fist fa-2x"></i>
+        <span class="label">Rock</span>
+      </button>
+      <button data-choice="paper" aria-label="Paper">
+        <i class="fa-solid fa-hand fa-2x"></i>
+        <span class="label">Paper</span>
+      </button>
+      <button data-choice="scissor" aria-label="Scissor">
+        <i class="fa-solid fa-hand-scissors fa-2x"></i>
+        <span class="label">Scissor</span>
+      </button>
+    </div>
+
+    <div class="details" aria-live="polite">
+      <p id="user_choice">You choose <span>—</span></p>
+      <p id="comp_choice">Computer choose <span>—</span></p>
+      <div id="result" class="hidden">Start the game — choose one</div>
+    </div>
+  </div>
+
+  <!-- Local JS -->
+  <script src="script.js"></script>
+</body>
+</html>
